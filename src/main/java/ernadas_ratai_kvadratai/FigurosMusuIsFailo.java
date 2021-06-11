@@ -21,6 +21,12 @@ public class FigurosMusuIsFailo extends FigurosMusu {
 
 	public ArrayList<Figura> atiduokSarasa() {
 		
+		nuskaityti();
+		// o jei nesigauna grazinam testini rinkimi
+		return testinis_rinkinys;
+	}
+	
+	public void nuskaityti() {
 		// failo atidarymas ir skaitymas ir naujo saraso sudarymas
 		try {
 		
@@ -57,8 +63,6 @@ public class FigurosMusuIsFailo extends FigurosMusu {
 			System.out.println ( "imamas testinis rinkinys .." );
 			
 			testinis_rinkinys = super.atiduokSarasa();
-		}	
-		// o jei nesigauna grazinam testini rinkimi
-		return testinis_rinkinys;
+		}
 	}
 }

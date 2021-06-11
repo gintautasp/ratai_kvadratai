@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "mainspring" class = "ernadas_ratai_kvadratai.PlokstumuErdve" scope = "singleton">
+		<constructor-arg index="0" ref="figuros_musu_is_failo" /> 
+   </bean>
+   <bean id = "figuros_musu" class = "ernadas_ratai_kvadratai.FigurosMusu" scope = "singleton">
+   </bean> 
+   <bean id = "figuros_musu_is_failo" class = "ernadas_ratai_kvadratai.FigurosMusuIsFailo" scope = "singleton">
+   				<constructor-arg index="0" value="figuros.csv" />
+   </bean>
+   <bean id = "figuros_musu_ivedamos_is_klaviaturos" class = "ernadas_ratai_kvadratai.FigurosMusuIvedamosIsKlaviaturos" scope = "singleton">
+   </bean>  
+</beans>
